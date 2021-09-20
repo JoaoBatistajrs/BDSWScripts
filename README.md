@@ -5,6 +5,7 @@ CRETE DATABASE EstrelaDaMorte;
 
 * Criação da Tabela Planetas: 
 
+```shell script
 CREATE TABLE Planetas(
 	IdPlaneta int NOT NULL,
 	Nome varchar (50) NOT NULL,
@@ -16,9 +17,10 @@ CREATE TABLE Planetas(
 )
  
 ALTER TABLE Planetas ADD CONSTRAINT PK_Planetas PRIMARY KEY (IdPlaneta);
+```
 
 * Criação da tabela Naves: 
-
+```shell script
 CREATE TABLE Naves(
 	IdNave int NOT NULL,
 	Nome varchar (100) NOT NULL,
@@ -29,9 +31,10 @@ CREATE TABLE Naves(
 )
 
 ALTER TABLE Naves ADD CONSTRAINT PK_Naves PRIMARY KEY (IdNave);
+```
 
 * Criação da tabela Pilotos: 
-
+```shell script
 CREATE TABLE Pilotos(
 	IdPiloto int NOT NULL,
 	Nome varchar (200) NOT NULL,
@@ -47,9 +50,10 @@ GO
 
 ALTER TABLE Pilotos ADD CONSTRAINT FK_Pilotos_Planetas FOREING KEY (IdPlaneta)
 REFERENCES Planetas (IdPlaneta)
+```
 
 * Criação da Tabela PilotosNaves: 
-
+```shell script
 CREATE  TABLE PilotosNaves(
 	IdPiloto int NOT NULL,	
 	IdNave int NOT NULL,
@@ -73,9 +77,10 @@ REFERENCES Pilotos (IdNave)
 GO
 
 ALTER TABLE PilotosNaves ADD CONSTRAINT DF_PilotosNaves_FlagAutorizado DEFAULT (1) FOR FlagAutorizado
+```
 
 * Criação da tabela HistoricoViagens: 
-
+```shell script
 CREATE TABLE HistoricoViagens(
 	IdNave int NOT NULL,
 	IdPiloto int NOT NULL,
