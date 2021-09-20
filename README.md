@@ -1,8 +1,10 @@
 <h2>Scripts para a criação de um banco de dados para utilização da API do Star Wars</h2>
 
 * Criação do Banco de Dados:
-CRETE DATABASE EstrelaDaMorte;
 
+```shell script
+CREATE DATABASE EstrelaDaMorte;
+```
 * Criação da Tabela Planetas: 
 
 ```shell script
